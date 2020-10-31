@@ -1,0 +1,130 @@
+/*
+Google Font Alternatives (kind of lame ones though)
+
+Futura - Muli
+Helvetica - Source Sans Pro
+Optima - Arsenal
+Garmond - Lora
+Playfair Display - Bodini
+
+font-family: 'Muli', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Arsenal', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Playfair Display', serif;
+*/
+
+html {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+#wrapper {
+    margin: auto;
+    max-width: 1600px;
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 5px;
+    padding: 0 5px;
+}
+
+header {
+    background-color: white;
+    background-color: #488DB5;
+    height: 300px;
+    position: relative;
+}
+
+#logo {
+    font-family: 'Playfair Display', serif;
+    padding: 20px 0;
+    width: 200px;
+    margin: auto;
+    font-variant: small-caps;
+    letter-spacing: .05em;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    line-height: 1.0em;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+nav ul {
+    font-family: 'Muli', sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+    color: #ddd;
+    background-color: #488DB5;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: middle;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px 8px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #222;
+}
+
+#content {
+    min-height: 200px;
+    padding: 0 50px;
+    background-color: white;
+    padding-bottom: 80px;
+}
+
+.username {
+    font-family: 'Lora', serif;
+    font-size: .8em;
+    font-style: italic;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.userpic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: #222;
+    background-image: url("../img/blackleather.png");
+    border: 2pt solid #222;
+    float: left;
+    margin: 0 40px 20px 0px;
+}
+
+textarea {
+    width: 95%;
+    color: #777;
+    font-size: 1em;
+    padding: 1em;
+    height: 100px;
+}
+
+footer {
+    font-family: 'Muli', sans-serif;
+    padding: 20px;
+    color: #ddd;
+    background-color: #222;
+    font-size: .9em;
+}
+
+footer a {
+    color: white;
+}
