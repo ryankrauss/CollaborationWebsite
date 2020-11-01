@@ -7,7 +7,7 @@ $dbpass  = '35fils';   // ...to your installation
 
 
 $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-if ($connection->connect_error) 
+if ($connection->connect_error)
     die("Fatal Error 1");
 
 function createTable($name, $query){
@@ -41,6 +41,21 @@ function sanitizeString($var){
 }
 
 function showProfile($user) {
+
+  //Code that shows user's uploaded songs
+    foreach(glob("useraudio/$user*.mp3") as $file){
+      $shortName = explode(".", basename($file));
+      echo ("<p>$shortName[1]</p>");
+      if (file_exists($file)){
+        echo "
+        <audio controls>
+          <source src='$file' type='audio/mp3'>
+          Your browser does not support the audio element.
+        </audio>
+        ";
+      }
+    }
+
     if (file_exists("userpics/$user.jpg"))
         echo "<img class='userpic' src='userpics/$user.jpg'>";
 

@@ -7,12 +7,11 @@ require_once 'header.php';
 echo "<h3>Upload Your Song </h3>";
 echo "<div>";
 
-
 if(isset($_POST['submit']))
     {
 
-$path = "useraudio/"; 
-$valid_formats1 = array("mp3", "ogg", "flac"); 
+$path = "useraudio/$user.";
+$valid_formats1 = array("mp3", "ogg", "flac");
 if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
     {
         $file1 = $_FILES['file1']['name'];
@@ -30,7 +29,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
                             echo "Upload Successful";
                             }
                         else
-                            echo "failed";              
+                            echo "failed";
                     }
         }
     }
@@ -56,4 +55,3 @@ _END;
 	</form>
   </body>
 </html>
-
