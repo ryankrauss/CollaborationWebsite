@@ -42,29 +42,80 @@ function sanitizeString($var){
 
 function showProfile($user) {
 
+  if (file_exists("userpics/$user.jpg"))
+      echo "<img class='userpic' src='userpics/$user.jpg'>";
+
+  $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
+
+  if ($result->num_rows) {
+      $row = $result->fetch_array(MYSQLI_ASSOC);
+      echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
+  }
+  else echo "<p>No Profile Photo</p><br>";
+
   //Code that shows user's uploaded songs
     foreach(glob("useraudio/$user*.mp3") as $file){
       $shortName = explode(".", basename($file));
-      echo ("<p>$shortName[1]</p>");
+      echo "<div style='display: inline-block; overflow:scroll;>";
+      echo ("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
       if (file_exists($file)){
         echo "
-        <audio controls>
+        <audio controls style='float: left; padding-right: 2em;'>
           <source src='$file' type='audio/mp3'>
           Your browser does not support the audio element.
         </audio>
         ";
       }
+      echo "</div>";
     }
 
-    if (file_exists("userpics/$user.jpg"))
-        echo "<img class='userpic' src='userpics/$user.jpg'>";
 
-    $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
+}
 
-    if ($result->num_rows) {
-        $row = $result->fetch_array(MYSQLI_ASSOC);
-        echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
+function showDiscover() {
+
+  echo "<h2>Discover</h2>";
+  $result = queryMysql("SELECT * FROM members ORDER BY RAND() LIMIT 5");
+  $following = array();
+  $num    = $result->num_rows;
+  for ($j = 0 ; $j < $num ; ++$j) {
+      $row           = $result->fetch_array(MYSQLI_ASSOC);
+      $following[$j] = $row['user'];
+  }
+  echo "<div style='width= 20vw; display: block; background-color: Gainsboro; margin= 2em;'>";
+  foreach($following as $friend){
+    $name = "$friend";
+    echo "<div style='display: inline-block; overflow:scroll;'>";
+    echo "<div style='display: inline-block; margin: 2em;'>";
+    echo "<h3>$name</h3>";
+    if (file_exists("userpics/$friend.jpg"))
+        echo "<img class='userpic' style='text-align: left; position: absolute; margin: 2em;' src='userpics/$friend.jpg'>";
+    echo "<div style=' box-shadow: 5px 10px; border: 1px solid black; text-align: right; padding: 2em;'>";
+    foreach(glob("useraudio/$friend*.mp3") as $file){
+      $shortName = explode(".", basename($file));
+      echo "<div style='display: inline-block;'>";
+      echo ("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
+      if (file_exists($file)){
+        echo "
+        <audio controls style='float: left; padding-right: 2em;'>
+          <source src='$file' type='audio/mp3'>
+          Your browser does not support the audio element.
+        </audio>
+        ";
+      }
+      echo "</div>";
     }
-    else echo "<p>Nothing to see here, yet</p><br>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "<br>";
+  }
+  echo "</div>";
+
+
+
+
+
+
 }
 ?>

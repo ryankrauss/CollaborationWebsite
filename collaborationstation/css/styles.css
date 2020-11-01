@@ -105,9 +105,10 @@ nav li a:hover {
     background-color: #222;
     background-image: url("../img/blackleather.png");
     border: 2pt solid #222;
-    float: left;
+    //float: left;
     margin: 0 40px 20px 0px;
 }
+
 
 textarea {
     width: 95%;

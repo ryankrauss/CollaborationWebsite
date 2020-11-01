@@ -10,12 +10,14 @@ if (isset($_GET['view'])) {
     $view = sanitizeString($_GET['view']);
 
     if ($view == $user)
-        $name = "Your";
-    else
-        $name = "$view's";
+        $name = "$view";
 
-    echo "<h3>$name Profile</h3>";
+    else
+        $name = "Your";
+
+    echo "<h3>$name</h3>";
     showProfile($view);
+    showDiscover();
     echo "<a href='messages.php?view=$view'>View $name messages</a>";
     die(require 'footer.php');
 }
@@ -26,7 +28,7 @@ if (isset($_GET['add'])) {
     $result = queryMysql("SELECT * FROM friends WHERE user='$add' AND friend='$user'");
     if (!$result->num_rows)
     queryMysql("INSERT INTO friends VALUES ('$add', '$user')");
-} 
+}
 elseif (isset($_GET['remove'])) {
     $remove = sanitizeString($_GET['remove']);
     queryMysql("DELETE FROM friends WHERE user='$remove' AND friend='$user'");
@@ -51,16 +53,16 @@ for ($j = 0 ; $j < $num ; ++$j) {
     $result1 = queryMysql("SELECT * FROM friends WHERE user='$user' AND friend='" . $row['user'] . "'");
     $t2      = $result1->num_rows;
 
-    if (($t1 + $t2) > 1) 
+    if (($t1 + $t2) > 1)
         echo " &harr; is a mutual friend";
-    elseif ($t1) 
+    elseif ($t1)
         echo " &larr; you are following";
-    elseif ($t2) { 
+    elseif ($t2) {
         echo " &rarr; is following you";
-        $follow = "recip"; 
+        $follow = "recip";
     }
 
-    if (!$t1) 
+    if (!$t1)
         echo " [<a href='members.php?add=" . $row['user'] . "'>$follow</a>]";
     else
         echo " [<a href='members.php?remove=" . $row['user'] . "'>drop</a>]";
