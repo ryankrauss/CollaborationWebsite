@@ -33,7 +33,7 @@ html {
 header {
     background-color: white;
     background-color: #488DB5;
-    height: 300px;
+    height: 150px;
     position: relative;
 }
 
@@ -195,4 +195,43 @@ footer {
 
 footer a {
     color: white;
+}
+
+.discoverBack {
+	width: 40vw; 
+	display: block; 
+	background-color: Gainsboro; 
+	margin: 2em;
+	
+}
+
+.discoverBox {
+	display: inline-block; 
+	overflow: auto;
+	border: 2px solid black;
+}
+
+.discoverInfo {
+	display: inline-block; 
+	margin: 2em;
+}
+
+.discoverSongbox {
+	 box-shadow: 5px 10px; 
+	 border: 2px solid black; 
+	 text-align: right; 
+	 padding: 2em;
+}
+
+.discoverPic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: #222;
+    background-image: url("../img/blackleather.png");
+    border: 2pt solid #222;
+    //float: left;
+    margin: 0 40px 20px 0px;
+	
 }

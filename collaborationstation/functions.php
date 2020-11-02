@@ -5,6 +5,18 @@ $dbname  = 'db35';   // Modify these...
 $dbuser  = 'user35';   // ...variables according
 $dbpass  = '35fils';   // ...to your installation
 
+echo <<<_INIT
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'> 
+        <script src='javascript.js'></script>
+        <link href="https://fonts.googleapis.com/css?family=Arsenal|Lora|Muli|Source+Sans+Pro|Playfair+Display&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='css/styles.css'>
+        <title>$clubstr: $userstr</title>
+        </head>
+_INIT;
 
 $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 if ($connection->connect_error)
@@ -82,15 +94,15 @@ function showDiscover() {
       $row           = $result->fetch_array(MYSQLI_ASSOC);
       $following[$j] = $row['user'];
   }
-  echo "<div style='width= 20vw; display: block; background-color: Gainsboro; margin= 2em;'>";
+  echo "<div class='discoverBack'>";
   foreach($following as $friend){
     $name = "$friend";
-    echo "<div style='display: inline-block; overflow:scroll;'>";
-    echo "<div style='display: inline-block; margin: 2em;'>";
+    echo "<div class='discoverBox'>";
+    echo "<div class='discoverInfo'>";
     echo "<h3>$name</h3>";
     if (file_exists("userpics/$friend.jpg"))
-        echo "<img class='userpic' style='text-align: left; position: absolute; margin: 2em;' src='userpics/$friend.jpg'>";
-    echo "<div style=' box-shadow: 5px 10px; border: 1px solid black; text-align: right; padding: 2em;'>";
+        echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
+    echo "<div class='discoverSongbox'>";
     foreach(glob("useraudio/$friend*.mp3") as $file){
       $shortName = explode(".", basename($file));
       echo "<div style='display: inline-block;'>";
@@ -110,7 +122,7 @@ function showDiscover() {
     echo "</div>";
     echo "<br>";
   }
-  echo "</div>";
+   echo "</div>";
 
 
 
