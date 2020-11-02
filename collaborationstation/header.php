@@ -36,25 +36,32 @@ _HEADER_OPEN;
 
 if ($loggedin) {
 echo <<<_LOGGEDIN
-
-            <nav><ul>
+            <div class="navbar">
                 <li><a href='members.php?view=$user'>Home</a></li>
-                <li><a href='members.php'>Members</a></li>
                 <li><a href='friends.php'>Friends</a></li>
                 <li><a href='messages.php'>Messages</a></li>
-                <li><a href='profile.php'>Edit Profile</a></li>
-				<li><a href='testpage.php'>Song Upload</a></li>
-                <li><a href='logout.php'>Log out</a></li>
-            </ul></nav>
+                <li><a href='testpage.php'>Song Upload</a></li>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">Settings
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <li><a href='members.php'>Members</a></li>
+                        <li><a href='profile.php'>Edit Profile</a></li>
+                        <li><a href='logout.php'>Log out</a></li>
+                    </div>
+                </div>
+            </div>
 _LOGGEDIN;
 } else {
 echo <<<_GUEST
 
-            <nav><ul>
+            <div class="navbar">
                 <li><a href='index.php'>Home</a></li>
                 <li><a href='signup.php'>Sign Up</a></li>
                 <li><a href='login.php'>Log In</a></li>
-            </ul></nav>
+            </div>
 _GUEST;
  }
 

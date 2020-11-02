@@ -50,7 +50,7 @@ header {
     line-height: 1.0em;
 }
 
-nav {
+/* nav {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -80,6 +80,73 @@ nav li a {
 
 nav li a:hover {
     background-color: #222;
+}
+*/
+.navbar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #ddd;
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    list-style-type: none;}
+
+.navbar a {
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #222;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 #content {
