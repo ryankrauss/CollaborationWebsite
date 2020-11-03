@@ -17,7 +17,7 @@ font-family: 'Playfair Display', serif;
 html {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #222;
+    color: #888;
     background-color: white;
 }
 
@@ -31,9 +31,15 @@ html {
 }
 
 header {
+<<<<<<< Updated upstream
     background-color: white;
     background-color: #488DB5;
     height: 150px;
+=======
+    background-color: red;
+    background-color: #111;
+    height: 300px;
+>>>>>>> Stashed changes
     position: relative;
 }
 
@@ -79,7 +85,7 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #222;
+    background-color: #red;
 }
 */
 .navbar {
