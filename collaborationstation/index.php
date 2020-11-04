@@ -8,7 +8,7 @@ echo "<div>";
 if ($loggedin) 
     echo " $user, you are logged in";
 else           
-    echo 'Please sign up, or log in if you\'re already a member.';
+    echo '<h5>Please sign up, or log in if you\'re already a member.</h5>';
 
 echo <<<_END
     </div><br>

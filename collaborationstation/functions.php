@@ -99,7 +99,7 @@ function showDiscover() {
     $name = "$friend";
     echo "<div class='discoverBox'>";
     echo "<div class='discoverInfo'>";
-    echo "<h3><a href='members.php?view=$name'>$name</a></h3>";
+    echo "<h5>$name</h5>";
     if (file_exists("userpics/$friend.jpg"))
         echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
     echo "<div class='discoverSongbox'>";

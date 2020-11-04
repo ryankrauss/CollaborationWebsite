@@ -34,11 +34,11 @@ echo <<<_END
             <h3>Enter username and password</h3>
         </div>
         <div data-role='fieldcontain'>
-            <label>Username</label>
+            <label id = "userEnter">Username</label>
             <input type='text' maxlength='16' name='user' value='$user'>
         </div>
         <div data-role='fieldcontain'>
-            <label>Password</label>
+            <label id = "userEnter">Password</label>
             <input type='password' maxlength='16' name='pass' value='$pass'>
         </div>
         <div data-role='fieldcontain'>

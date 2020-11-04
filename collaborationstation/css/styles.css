@@ -15,47 +15,59 @@ font-family: 'Playfair Display', serif;
 */
 
 html {
-    font-size: 16px;
+    font-size: 36px;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #888;
-    background-color: white;
+    color: #E60000;
+    background-color: #707070;
 }
 
 #wrapper {
-    margin: auto;
-    max-width: 1600px;
-    border-color: #222;
-    border-style: solid;
-    border-width: 0 5px;
-    padding: 0 5px;
+    max-width: auto;
+	
 }
 
-header {
-<<<<<<< Updated upstream
-    background-color: white;
-    background-color: #488DB5;
-    height: 150px;
-=======
-    background-color: red;
-    background-color: #111;
-    height: 300px;
->>>>>>> Stashed changes
+#globalHead {
+	background: url("../UIimages/soundboard.png");
+	background-position: 0px,50px,0px,0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-color: #707070;
+    height: 400px;
     position: relative;
 }
 
 #logo {
+	font-size: 50px;
     font-family: 'Playfair Display', serif;
-    padding: 20px 0;
-    width: 200px;
-    margin: auto;
+    padding: 100px;
+    width: 400px;
+	margin: auto;
     font-variant: small-caps;
     letter-spacing: .05em;
     font-size: 1.5em;
     text-align: center;
-    color: white;
+    color: #FFFFFF;
     line-height: 1.0em;
+	
 }
-
+h3{
+	font-size: 38px;
+}
+h5{
+	font-size: 16px;
+}
+#userEnter{
+	font-size: 20px;
+}
+input[type=submit]{
+	background-color: #610000;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
 /* nav {
     position: absolute;
     width: 100%;
@@ -91,13 +103,13 @@ nav li a:hover {
 .navbar {
     position: absolute;
     width: 100%;
-    bottom: 0;
-    color: #ddd;
-    background-color: #222;
+    bottom: 0px;
+    background-color: #000000;
     margin: 0;
     padding: 0;
-    font-family: 'Muli', sans-serif;
-    list-style-type: none;}
+    font-family: 'Arsenal', sans-serif;
+    list-style-type: none;
+	}
 
 .navbar a {
     display: block;
@@ -105,12 +117,13 @@ nav li a:hover {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 45px;
     text-decoration: none;
 }
 
 .dropdown {
-    float: right;
+    float: left;
+	margin: 10px,0px,0px,0px;
     overflow: hidden;
 }
 
@@ -126,13 +139,13 @@ nav li a:hover {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #222;
+    background-color: #E62C20;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #610000;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -140,7 +153,7 @@ nav li a:hover {
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -148,7 +161,7 @@ nav li a:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #E62C20;
 }
 
 .dropdown:hover .dropdown-content {
@@ -156,30 +169,34 @@ nav li a:hover {
 }
 
 #content {
+	font-size: 20px;
     min-height: 200px;
-    padding: 0 50px;
-    background-color: white;
-    padding-bottom: 80px;
+    padding: 20px;
+    background-color: #707070;
+    padding-bottom: 0px;
 }
 
 .username {
     font-family: 'Lora', serif;
-    font-size: .8em;
+    font-size: 15px;
     font-style: italic;
-    text-align: right;
+    text-align: left;
+	color: #E60000;
     padding-right: 5px;
+	background-color: #707070;
 }
 
 .userpic {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    object-fit: contain;
-    background-color: #222;
+    border-radius: 100%;
+    background-color: black;
     background-image: url("../img/blackleather.png");
-    border: 2pt solid #222;
-    //float: left;
+	background-image: cover;
+    border: 2pt solid black;
+    float: left;
     margin: 0 40px 20px 0px;
+	padding: 10px;
 }
 
 
@@ -192,21 +209,31 @@ textarea {
 }
 
 footer {
+	position: bottom;
     font-family: 'Muli', sans-serif;
-    padding: 20px;
+    padding: 40px;
     color: #ddd;
-    background-color: #222;
-    font-size: .9em;
+    background-color: #000000;
 }
 
 footer a {
-    color: white;
+    color: #000000;
+}
+h4 {
+	font-size: 16px;
+	font-family: 'Muli', sans-serif;
+	
+}
+p{
+	padding:5px;
+	font-size: 14px;
+	font-family: 'Muli', sans-serif;
 }
 
 .discoverBack {
-	width: auto; 
-	display: inline-block; 
-	background-color: Gainsboro; 
+	width: 40vw; 
+	display: block; 
+	background-color: black; 
 	margin: 2em;
 	
 }
@@ -214,8 +241,7 @@ footer a {
 .discoverBox {
 	display: block; 
 	overflow: auto;
-	border: 2px solid black;
-	
+	border: 2px solid #363636;
 }
 
 .discoverInfo {
@@ -224,8 +250,8 @@ footer a {
 }
 
 .discoverSongbox {
-	 box-shadow: 5px 10px; 
-	 border: 2px solid black; 
+	 box-shadow: 10px 10px; 
+	 border: 2px solid #363636; 
 	 text-align: right; 
 	 padding: 2em;
 }
@@ -234,11 +260,12 @@ footer a {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    object-fit: contain;
-    background-color: #222;
-    background-image: url("../img/blackleather.png");
-    border: 2pt solid #222;
-    //float: left;
-    margin: 0 40px 20px 0px;
+	border: 1pt solid black;
+	background-image: url("../img/blackleather.png");
+	background-image: cover;
+    background-color: black;
+	padding: 10px;
+    margin: 10px 40px 20px 10px;
+    float: left;
 	
 }

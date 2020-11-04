@@ -2,7 +2,6 @@
 session_start();
 
 $clubstr = 'Collaboration Station';
-$userstr = 'Welcome BRO';
 
 echo <<<_INIT
 <!DOCTYPE html> 
@@ -13,7 +12,6 @@ echo <<<_INIT
         <script src='javascript.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Arsenal|Lora|Muli|Source+Sans+Pro|Playfair+Display&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='css/styles.css'>
-        <title>$clubstr: $userstr</title>
         </head>
 _INIT;
 
@@ -30,7 +28,7 @@ echo <<<_HEADER_OPEN
     
     <body>
         <div id="wrapper">
-        <header>
+        <header id ="globalHead">
             <div id='logo'>$clubstr</div>
 _HEADER_OPEN;
 

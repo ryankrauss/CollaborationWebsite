@@ -45,13 +45,13 @@ echo <<<_END
             <h3>Create username and password</h3>
         </div>
         <div data-role='fieldcontain'>
-            <label>Username</label>
+            <label id ="userEnter">Username</label>
             <input type='text' maxlength='16' name='user' value='$user' onBlur='checkUser(this)'>
             <label></label>
             <!-- <div id='used'>&nbsp;</div> -->
         </div>
         <div data-role='fieldcontain'>
-            <label>Password</label>
+            <label id ="userEnter">Password</label>
             <input type='text' maxlength='16' name='pass' value='$pass'>
         </div>
         <div data-role='fieldcontain'>
