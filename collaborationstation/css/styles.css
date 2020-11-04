@@ -173,7 +173,7 @@ nav li a:hover {
     min-height: 200px;
     padding: 20px;
     background-color: #707070;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
 }
 
 .username {
