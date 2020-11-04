@@ -33,7 +33,7 @@ if (isset($_POST['user'])) {
             $error = 'That username already exists<br><br>';
         else {
             queryMysql("INSERT INTO members VALUES('$user', '$pass')");
-            die('<h4>Account created</h4>Please Log in.</div></body></html>');
+            echo "<script>window.location = 'index.php?view=$user'</script>";
         }
     }
 }
