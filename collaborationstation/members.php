@@ -17,7 +17,7 @@ if (isset($_GET['view'])) {
 
     echo "<h3>$name</h3>";
     showProfile($view);
-    showDiscover();
+    showDiscover($view);
     echo "<a id = 'messButton' href='messages.php?view=$view'>View your messages</a>";
     die(require 'footer.php');
 }

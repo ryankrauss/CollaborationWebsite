@@ -6,11 +6,11 @@ $dbuser  = 'user35';   // ...variables according
 $dbpass  = '35fils';   // ...to your installation
 
 echo <<<_INIT
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'> 
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <script src='javascript.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Arsenal|Lora|Muli|Source+Sans+Pro|Playfair+Display&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='css/styles.css'>
@@ -85,10 +85,10 @@ function showProfile($user) {
 
 }
 
-function showDiscover() {
+function showDiscover($user) {
 
   echo "<h2>Discover</h2>";
-  $result = queryMysql("SELECT * FROM members ORDER BY RAND() LIMIT 5");
+  $result = queryMysql("SELECT * FROM members where user!='$user' ORDER BY RAND() LIMIT 5");
   $following = array();
   $num    = $result->num_rows;
   for ($j = 0 ; $j < $num ; ++$j) {
