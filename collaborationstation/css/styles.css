@@ -200,6 +200,12 @@ p{
 	font-size: 14px;
 	font-family: 'Muli', sans-serif;
 }
+#messButton{
+	color: white;
+	background-color: #610000;
+	text-decoration: none;
+	padding: 10px;
+}
 
 .discoverBack {
 	width: 40vw; 
