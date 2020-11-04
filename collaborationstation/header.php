@@ -5,11 +5,11 @@ $clubstr = 'Collaboration Station';
 $userstr = 'Welcome BRO';
 
 echo <<<_INIT
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'> 
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <script src='javascript.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Arsenal|Lora|Muli|Source+Sans+Pro|Playfair+Display&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='css/styles.css'>
@@ -27,10 +27,10 @@ if (isset($_SESSION['user'])) {
 else $loggedin = FALSE;
 
 echo <<<_HEADER_OPEN
-    
+
     <body>
         <div id="wrapper">
-        <header id="oneTrueHead">
+        <header id="globalHead">
             <div id='logo'>$clubstr</div>
 _HEADER_OPEN;
 
@@ -41,7 +41,7 @@ echo <<<_LOGGEDIN
                 <li><a href='friends.php'>Friends</a></li>
                 <li><a href='collab.php'>Collab</a></li>
                 <li><a href='testpage.php'>Song Upload</a></li>
-            
+
                 <div class="dropdown">
                     <button class="dropbtn">Settings
                         <i class="fa fa-caret-down"></i>
