@@ -17,12 +17,14 @@ font-family: 'Playfair Display', serif;
 html {
     font-family: 'Source Sans Pro', sans-serif;
     color: #9F1828;
-    background-color: #707070;
+    //background-color: #707070;
+    background: linear-gradient(338deg, rgba(36,3,0,1) 0%, rgba(255,255,255,1) 79%);
+
 }
 
 #wrapper {
     max-width: auto;
-	
+
 }
 
 #globalHead {
@@ -30,7 +32,7 @@ html {
 	background-position: 0px,50px,0px,0px;
 	background-repeat: no-repeat;
 	background-size: cover;
-    background-color: #707070;
+    //background-color: #707070;
     height: 400px;
     position: relative;
 }
@@ -46,7 +48,7 @@ html {
     text-align: center;
     color: #FFFFFF;
     line-height: 1.0em;
-	
+
 }
 h3{
 	font-size: 38px;
@@ -138,7 +140,8 @@ input[type=submit]{
 	font-size: 20px;
     min-height: 200px;
     padding: 20px;
-    background-color: #707070;
+    //background-color: #707070;
+
     padding-bottom: 10px;
 }
 
@@ -192,7 +195,7 @@ footer a {
 h4 {
 	font-size: 16px;
 	font-family: 'Muli', sans-serif;
-	
+
 }
 p{
 	padding:5px;
@@ -207,28 +210,28 @@ p{
 }
 
 .discoverBack {
-	width: 40vw; 
-	display: block; 
-	background-color: black; 
+	width: 40vw;
+	display: block;
+	background-color: #fdfdfd;
 	margin: 2em;
-	
+
 }
 
 .discoverBox {
-	display: block; 
+	display: block;
 	overflow: auto;
 	border: 2px solid #363636;
 }
 
 .discoverInfo {
-	display: inline-block; 
+	display: inline-block;
 	margin: 2em;
 }
 
 .discoverSongbox {
-	 box-shadow: 10px 10px; 
-	 border: 2px solid #363636; 
-	 text-align: right; 
+	 box-shadow: 10px 10px;
+	 border: 2px solid #363636;
+	 text-align: right;
 	 padding: 2em;
 }
 
@@ -243,5 +246,5 @@ p{
 	padding: 10px;
     margin: 10px 40px 20px 10px;
     float: left;
-	
+
 }
