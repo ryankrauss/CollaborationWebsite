@@ -204,17 +204,18 @@ footer a {
 }
 
 .discoverBack {
-	width: 40vw; 
-	display: block; 
+	width: auto; 
+	display: inline-block; 
 	background-color: Gainsboro; 
 	margin: 2em;
 	
 }
 
 .discoverBox {
-	display: inline-block; 
+	display: block; 
 	overflow: auto;
 	border: 2px solid black;
+	
 }
 
 .discoverInfo {

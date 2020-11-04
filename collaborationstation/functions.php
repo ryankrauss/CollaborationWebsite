@@ -68,7 +68,7 @@ function showProfile($user) {
   //Code that shows user's uploaded songs
     foreach(glob("useraudio/$user*.mp3") as $file){
       $shortName = explode(".", basename($file));
-      echo "<div style='display: inline-block; overflow:scroll;>";
+      echo "<div style='display: inline-block; overflow:auto;>";
       echo ("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
       if (file_exists($file)){
         echo "
@@ -99,7 +99,7 @@ function showDiscover() {
     $name = "$friend";
     echo "<div class='discoverBox'>";
     echo "<div class='discoverInfo'>";
-    echo "<h3>$name</h3>";
+    echo "<h3><a href='members.php?view=$name'>$name</a></h3>";
     if (file_exists("userpics/$friend.jpg"))
         echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
     echo "<div class='discoverSongbox'>";
