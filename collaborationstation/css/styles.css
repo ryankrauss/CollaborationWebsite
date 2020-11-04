@@ -15,7 +15,6 @@ font-family: 'Playfair Display', serif;
 */
 
 html {
-    font-size: 36px;
     font-family: 'Source Sans Pro', sans-serif;
     color: #E60000;
     background-color: #707070;
@@ -44,7 +43,6 @@ html {
 	margin: auto;
     font-variant: small-caps;
     letter-spacing: .05em;
-    font-size: 1.5em;
     text-align: center;
     color: #FFFFFF;
     line-height: 1.0em;
