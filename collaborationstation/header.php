@@ -2,6 +2,7 @@
 session_start();
 
 $clubstr = 'Collaboration Station';
+$userstr = 'Welcome BRO';
 
 echo <<<_INIT
 <!DOCTYPE html> 
@@ -12,6 +13,7 @@ echo <<<_INIT
         <script src='javascript.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Arsenal|Lora|Muli|Source+Sans+Pro|Playfair+Display&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='css/styles.css'>
+        <title>$clubstr: $userstr</title>
         </head>
 _INIT;
 
@@ -20,7 +22,7 @@ require_once 'functions.php';
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
     $loggedin = TRUE;
-
+    $userstr  = "Logged in as: $user";
 }
 else $loggedin = FALSE;
 
@@ -28,10 +30,8 @@ echo <<<_HEADER_OPEN
     
     <body>
         <div id="wrapper">
-        <header id ="globalHead">
-            <div class='username'>$user</div>
+        <header id="oneTrueHead">
             <div id='logo'>$clubstr</div>
-            
 _HEADER_OPEN;
 
 if ($loggedin) {
@@ -39,7 +39,7 @@ echo <<<_LOGGEDIN
             <div class="navbar">
                 <li><a href='members.php?view=$user'>Home</a></li>
                 <li><a href='friends.php'>Friends</a></li>
-                <li><a href='messages.php'>Messages</a></li>
+                <li><a href='collab.php'>Collab</a></li>
                 <li><a href='testpage.php'>Song Upload</a></li>
             
                 <div class="dropdown">
@@ -68,7 +68,7 @@ _GUEST;
 echo <<<_HEADER_CLOSE
 
         </header>
-        
+        <div class='username'>$userstr</div>
         <div id="content">
 _HEADER_CLOSE;
 
