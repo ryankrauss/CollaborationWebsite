@@ -29,7 +29,9 @@ echo <<<_HEADER_OPEN
     <body>
         <div id="wrapper">
         <header id ="globalHead">
+            <div class='username'>$user</div>
             <div id='logo'>$clubstr</div>
+            
 _HEADER_OPEN;
 
 if ($loggedin) {
@@ -66,7 +68,7 @@ _GUEST;
 echo <<<_HEADER_CLOSE
 
         </header>
-        <div class='username'>$userstr</div>
+        
         <div id="content">
 _HEADER_CLOSE;
 

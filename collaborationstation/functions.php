@@ -63,7 +63,8 @@ function showProfile($user) {
       $row = $result->fetch_array(MYSQLI_ASSOC);
       echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
   }
-  else echo "<p>No Profile Photo</p><br>";
+  //TODO fix that shit
+  //else echo "<p>No Profile Photo</p><br>";
 
   //Code that shows user's uploaded songs
     foreach(glob("useraudio/$user*.mp3") as $file){

@@ -15,9 +15,9 @@ font-family: 'Playfair Display', serif;
 */
 
 html {
-    font-size: 36px;
+
     font-family: 'Source Sans Pro', sans-serif;
-    color: #E60000;
+    color: #9F1828;
     background-color: #707070;
 }
 
@@ -44,7 +44,6 @@ html {
 	margin: auto;
     font-variant: small-caps;
     letter-spacing: .05em;
-    font-size: 1.5em;
     text-align: center;
     color: #FFFFFF;
     line-height: 1.0em;
@@ -68,38 +67,6 @@ input[type=submit]{
 	margin: 4px 2px;
 	cursor: pointer;
 }
-/* nav {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-nav ul {
-    font-family: 'Muli', sans-serif;
-    list-style-type: none;
-    overflow: hidden;
-    color: #ddd;
-    background-color: #488DB5;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    float: middle;
-}
-
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 6px 8px;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    background-color: #red;
-}
-*/
 .navbar {
     position: absolute;
     width: 100%;
@@ -178,12 +145,16 @@ nav li a:hover {
 
 .username {
     font-family: 'Lora', serif;
-    font-size: 15px;
+    font-size: 25px;
     font-style: italic;
-    text-align: left;
-	color: #E60000;
-    padding-right: 5px;
+	color: #9F1828;
 	background-color: #707070;
+    border-color: #707070;
+    border-bottom-left-radius: 10px;
+    width: 60px;
+    padding-right: 20px;
+    padding-left: 5px;
+    float: right;
 }
 
 .userpic {
