@@ -41,6 +41,7 @@ echo <<<_LOGGEDIN
                 <li><a href='friends.php'>Friends</a></li>
                 <li><a href='collab.php'>Collab</a></li>
                 <li><a href='testpage.php'>Song Upload</a></li>
+                <li><a href='feed.php'>Live Feed</a></li>
 
                 <div class="dropdown">
                     <button class="dropbtn">Settings
@@ -59,6 +60,7 @@ echo <<<_GUEST
 
             <div class="navbar">
                 <li><a href='index.php'>Home</a></li>
+                <li><a href='feed.php'>Live Feed</a></li>
                 <li><a href='signup.php'>Sign Up</a></li>
                 <li><a href='login.php'>Log In</a></li>
             </div>
