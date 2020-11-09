@@ -52,6 +52,7 @@ echo <<<_LOGGEDIN
                         <li><a href='logout.php'>Log out</a></li>
                     </div>
                 </div>
+                <div class='username'>$userstr</div>
             </div>
 _LOGGEDIN;
 } else {
@@ -68,7 +69,6 @@ _GUEST;
 echo <<<_HEADER_CLOSE
 
         </header>
-        <div class='username'>$userstr</div>
         <div id="content">
 _HEADER_CLOSE;
 
