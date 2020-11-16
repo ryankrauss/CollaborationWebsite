@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$clubstr = 'Collaboration Station';
+$clubstr = 'Soundwave';
 $userstr = 'Welcome BRO';
 
 echo <<<_INIT
