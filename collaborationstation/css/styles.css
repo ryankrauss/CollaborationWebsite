@@ -54,7 +54,7 @@ h3{
 	font-size: 38px;
 }
 h5{
-	font-size: 16px;
+	font-size: 28px;
 }
 #userEnter{
 	font-size: 20px;
@@ -222,7 +222,7 @@ p{
 }
 
 .discoverInfo {
-	display: inline-block;
+	display: inline;
 	margin: 2em;
 }
 
@@ -231,6 +231,7 @@ p{
 	 border: 2px solid #363636;
 	 text-align: right;
 	 padding: 2em;
+	 background-color: #fdfdfd;
 }
 
 .discoverPic {
@@ -242,7 +243,13 @@ p{
 	background-image: cover;
     background-color: black;
 	padding: 10px;
-    margin: 10px 40px 20px 10px;
+    margin: 40px 40px 20px 20px;
     float: left;
 
+}
+
+a {
+      text-decoration:none;
+	  color: #9F1828;
+	  float: left;
 }

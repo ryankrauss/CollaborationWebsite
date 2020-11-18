@@ -96,15 +96,17 @@ function showDiscover($user) {
       $row           = $result->fetch_array(MYSQLI_ASSOC);
       $following[$j] = $row['user'];
   }
-  echo "<div class='discoverBack'>";
+  //echo "<div class='discoverBack'>";
   foreach($following as $friend){
     $name = "$friend";
-    echo "<div class='discoverBox'>";
+	$count = 0;
+    //echo "<div class='discoverBox'>";
     echo "<div class='discoverInfo'>";
-    echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
+    //echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
     if (file_exists("userpics/$friend.jpg"))
         echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
     echo "<div class='discoverSongbox'>";
+	echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
     foreach(glob("useraudio/$friend*.mp3") as $file){
       $shortName = explode(".", basename($file));
       echo "<div style='display: inline-block;'>";
@@ -118,6 +120,10 @@ function showDiscover($user) {
         ";
       }
       echo "</div>";
+	  $count++;
+	  if ($count == 3) {
+		  break;
+	  }
     }
     echo "</div>";
     echo "</div>";
