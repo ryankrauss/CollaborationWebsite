@@ -87,16 +87,16 @@ function showProfile($user) {
 
 function showDiscover($user) {
 
-  echo "<h2>Discover</h2>";
-  //$result = queryMysql("SELECT * FROM members where user!='$user' ORDER BY RAND() LIMIT 5");
-  $result = queryMysql("SELECT * FROM members where user!='$user' LIMIT 3");
-  $following = array();
-  $num    = $result->num_rows;
-  for ($j = 0 ; $j < $num ; ++$j) {
-      $row           = $result->fetch_array(MYSQLI_ASSOC);
-      $following[$j] = $row['user'];
-  }
-  //echo "<div class='discoverBack'>";
+
+    //$result = queryMysql("SELECT * FROM members where user!='$user' ORDER BY RAND() LIMIT 5");
+    $result = queryMysql("SELECT * FROM members where user!='$user' LIMIT 3");
+    $following = array();
+    $num    = $result->num_rows;
+    for ($j = 0 ; $j < $num ; ++$j) {
+        $row           = $result->fetch_array(MYSQLI_ASSOC);
+        $following[$j] = $row['user'];
+    }
+    //echo "<div class='discoverBack'>";
   foreach($following as $friend) {
       $name = "$friend";
       $count = 0;
@@ -109,6 +109,7 @@ function showDiscover($user) {
           }
       }
       if ($exists == true){
+          echo "<h2>Discover</h2>";
           echo "<div class='discoverInfo'>";
           //echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
           if (file_exists("userpics/$friend.jpg"))

@@ -76,7 +76,6 @@ echo <<<_GUEST
 
             <div class="navbar">
                 <li><a href='index.php'>Home</a></li>
-                <li><a href='feed.php'>Live Feed</a></li>
                 <li><a href='signup.php'>Sign Up</a></li>
                 <li><a href='login.php'>Log In</a></li>
             </div>

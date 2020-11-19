@@ -12,9 +12,6 @@ if (isset($_GET['view'])) {
     if ($view == $user)
         $name = "$view";
 
-    else
-        $name = "Your";
-
     echo "<h3>$name</h3>";
     showProfile($view);
     showDiscover($view);
@@ -59,13 +56,13 @@ for ($j = 0 ; $j < $num ; ++$j) {
         echo " &larr; you are following";
     elseif ($t2) {
         echo " &rarr; is following you";
-        $follow = "recip";
+        $follow = "";
     }
 
     if (!$t1)
-        echo " [<a href='members.php?add=" . $row['user'] . "'>$follow</a>]";
+        echo "<a id = 'links' href='members.php?add=" . $row['user'] . "'>[$follow]</a>";
     else
-        echo " [<a href='members.php?remove=" . $row['user'] . "'>drop</a>]";
+        echo "<a id = 'links' href='members.php?remove=" . $row['user'] . "'>[drop]</a>";
 }
 echo "</ul>";
 require_once 'footer.php';

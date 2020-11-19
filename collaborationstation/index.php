@@ -19,7 +19,8 @@ _LOGGEDIN;
 }
 else {
     echo <<<_GUEST
-        <h5>Please sign up, or log in if you're already a member.</h5>
+        <h4>The music collaboration software designed to combine creativity</h4>
+        <h4>Please sign up, or log in if you're already a member.</h4>
 _GUEST;
 }
 
