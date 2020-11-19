@@ -38,7 +38,7 @@ html {
 }
 
 #logo {
-	font-size: 50px;
+	font-size: 70px;
     font-family: 'Playfair Display', serif;
     padding: 100px;
     width: 400px;
@@ -145,6 +145,12 @@ input[type=submit]{
     padding-bottom: 10px;
 }
 
+#form{
+    float: right;
+    padding-right: 10px;
+    padding-top: 12px;
+}
+
 .username {
     font-family: 'Lora', serif;
     font-size: 18px;
@@ -204,7 +210,7 @@ p{
 	color: white;
 	background-color: #610000;
 	text-decoration: none;
-	padding: 10px;
+	padding-bottom: 10px;
 }
 
 .discoverBack {
@@ -226,7 +232,7 @@ p{
 	margin: 2em;
 }
 
-.discoverSongbox {
+div.discoverSongbox {
 	 box-shadow: 10px 10px;
 	 border: 2px solid #363636;
 	 text-align: right;
