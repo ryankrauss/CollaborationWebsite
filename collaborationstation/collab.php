@@ -8,7 +8,7 @@ echo "<div>";
 
 
 if (!$loggedin)
-    die("Log in for messages</div><footer></footer></body></html>");
+    die("Must be logged in to view collaborations!");
 
 if (isset($_GET['view']))
     $view = sanitizeString($_GET['view']);

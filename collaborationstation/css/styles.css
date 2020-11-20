@@ -196,7 +196,7 @@ textarea {
 }
 
 footer {
-	
+
     font-family: 'Muli', sans-serif;
     padding-left: 40px;
     color: #ddd;
@@ -254,6 +254,10 @@ h4 {
 
 .discoverContainer {
   background-color: rgba(0,0,0,.1);
+}
+
+.song{
+  display: inline-block;
 }
 
 .discoverSongbox {
