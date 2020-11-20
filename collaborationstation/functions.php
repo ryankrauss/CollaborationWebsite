@@ -96,8 +96,8 @@ function showDiscover($user) {
         $row           = $result->fetch_array(MYSQLI_ASSOC);
         $following[$j] = $row['user'];
     }
-	echo "<h2>Discover</h2>";
-  echo "<div class='discoverContainer'>";
+  echo "<h2>Discover</h2>";
+  //echo "<div class='discoverContainer'>";
   foreach($following as $friend) {
       $name = "$friend";
       $count = 0;
@@ -154,7 +154,7 @@ function searchProfile($user) {
       $row           = $result->fetch_array(MYSQLI_ASSOC);
       $following[$j] = $row['user'];
   }
-  echo "<div class='discoverContainer'>";
+  //echo "<div class='discoverContainer'>";
   foreach($following as $friend){
     $name = "$friend";
     echo "<div class='discoverInfo'>";
