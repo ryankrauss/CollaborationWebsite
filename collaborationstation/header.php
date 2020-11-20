@@ -52,16 +52,13 @@ echo <<<_LOGGEDIN
                         <li><a href='logout.php'>Log out</a></li>
                     </div>
                 </div>
-
                 <form id="form" role="search" action="search.php">
                   <input type="search" id="query" name="q"
                    placeholder="Search Users..."
                    aria-label="Search through site content">
                   <button>Search</button>
                 </form>
-
                 <!--div class='username'>$userstr</div-->
-            </div>
 _LOGGEDIN;
 } else {
 echo <<<_GUEST
