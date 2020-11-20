@@ -161,6 +161,7 @@ function searchProfile($user) {
   echo "<div class='discoverContainer'>";
   foreach($following as $friend){
     $name = "$friend";
+    $count = 0;
     echo "<div class='discoverInfo'>";
     if (file_exists("userpics/$friend.jpg")){
       echo "<img class='discoverPic' src='userpics/$friend.jpg'>";

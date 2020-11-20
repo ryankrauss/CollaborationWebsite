@@ -176,6 +176,7 @@ input[type=submit]{
 
 .userpic {
     height: 100px;
+    width: 100px;
     border-radius: 100%;
     background-color: black;
     background-image: url("../img/blackleather.png");
