@@ -3,13 +3,14 @@
 <?php
 session_start();
 require_once 'header.php';
-require_once 'testpage.php';
+require_once 'collabFileUpload.php';
 
 
 echo "<div>";
 
 if(isset($_POST['submit']))
     {
+
 
 $path = "useraudio/$user.";
 $valid_formats1 = array("mp3", "ogg", "flac");
@@ -39,9 +40,9 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
 if (!$loggedin)
     die("Log in for messages</div><footer></footer></body></html>");
 
-if (isset($_GET['view'])) 
+if (isset($_GET['view']))
     $view = sanitizeString($_GET['view']);
-else 
+else
     $view = $user;
 
 if (isset($_POST['text'])) {
@@ -55,7 +56,7 @@ if (isset($_POST['text'])) {
 }
 
 if ($view != "") {
-    if ($view == $user) 
+    if ($view == $user)
         $name1 = $name2 = "Your";
     else {
         $name1 = "<a href='members.php?view=$view'>$view</a>'s";
@@ -112,11 +113,9 @@ for ($j = 0 ; $j < $num ; ++$j)
 if (!$num)
 
     echo "<br><span class='info'>No messages yet</span><br><br>";
-	
+
 echo <<<_END
     </div><br>
 _END;
 die(require 'footer.php');
 ?>
-
-
