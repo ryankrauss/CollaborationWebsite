@@ -1,7 +1,5 @@
 
 
-
-
 <?php
 session_start();
 require_once 'header.php';
@@ -79,29 +77,26 @@ if(isset($_POST['submit']))
 	
 }
 
-echo <<<_UPLOAD
-    <html>
-    <meta charset="UTF-8">
-    <title>Upload</title>
-    
-    <body>
-    
-    
-    <form enctype="multipart/form-data" id="form1" method="post" action="testpage.php">
-        <input type="file" name="file1" accept=".ogg,.flac,.mp3" required="required"/>
-        <input type="submit" name="submit"/>
-    </form>
-    </body>
-    </html>
-_UPLOAD;
 
 echo <<<_END
     </div><br>
 _END;
-die(require 'footer.php');
+
 ?>
 
+<html>
+  <meta charset="UTF-8">
+  <title>Upload</title>
 
+  <body>
+
+
+	<form enctype="multipart/form-data" id="form1" method="post" action="testpage.php">
+	<input type="file" name="file1" accept=".ogg,.flac,.mp3" required="required"/>
+	<input type="submit" name="submit"/>
+	</form>
+  </body>
+</html>
 
 
 <script>
