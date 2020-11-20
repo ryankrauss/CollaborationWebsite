@@ -38,7 +38,7 @@ echo <<<_LOGGEDIN
             <div class="navbar">
                 <li><a href='members.php?view=$user'>Home</a></li>
                 <li><a href='friends.php'>Friends</a></li>
-                <li><a href='collab.php'>Collab</a></li>
+                <li><a href='collab.php?view=$user'>Collab</a></li>
                 <li><a href='testpage.php'>Song Upload</a></li>
                 <li><a href='feed.php'>Live Feed</a></li>
 
@@ -52,16 +52,13 @@ echo <<<_LOGGEDIN
                         <li><a href='logout.php'>Log out</a></li>
                     </div>
                 </div>
-
                 <form id="form" role="search" action="search.php">
                   <input type="search" id="query" name="q"
                    placeholder="Search Users..."
                    aria-label="Search through site content">
                   <button>Search</button>
                 </form>
-
                 <!--div class='username'>$userstr</div-->
-            </div>
 _LOGGEDIN;
 } else {
 echo <<<_GUEST

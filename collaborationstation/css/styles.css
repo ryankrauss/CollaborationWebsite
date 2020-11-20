@@ -21,6 +21,11 @@ html {
     background: linear-gradient(338deg, rgba(36,3,0,1) 0%, rgba(255,255,255,1) 79%);
 
 }
+b{
+	float: left;
+	font-size: 16px;
+	padding: 5px;
+}
 
 #wrapper {
     max-width: auto;
@@ -40,7 +45,7 @@ html {
 #logo {
 	font-size: 70px;
     font-family: 'Playfair Display', serif;
-    padding: 120px;
+    padding: 100px;
     width: 400px;
 	margin: auto;
     font-variant: small-caps;
@@ -140,15 +145,20 @@ input[type=submit]{
 	font-size: 20px;
     min-height: 200px;
     padding: 20px;
-    background-color: #707070;
+    //background-color: #707070;
 
     padding-bottom: 10px;
 }
 
 #form{
-    float: right;
+	float: right;
     padding-right: 10px;
     padding-top: 12px;
+    background-color: #610000;
+    border: none;
+    color: white;
+    padding: 13px 24px;
+    text-decoration: none;
 }
 
 .username {
@@ -166,6 +176,7 @@ input[type=submit]{
 
 .userpic {
     height: 100px;
+    width: 100px;
     border-radius: 100%;
     background-color: black;
     background-image: url("../img/blackleather.png");
@@ -175,17 +186,7 @@ input[type=submit]{
     margin: 0 40px 20px 0px;
 	padding: 10px;
 }
-footer {
-	position: bottom;
-    font-family: 'Muli', sans-serif;
-    padding: 30px;
-    color: #ddd;
-    background-color: #000000;
-}
 
-footer a {
-    color: #000000;
-}
 
 textarea {
     width: 95%;
@@ -195,23 +196,42 @@ textarea {
     height: 100px;
 }
 
+footer {
 
+    font-family: 'Muli', sans-serif;
+    padding-left: 40px;
+    color: #ddd;
+    background-color: #000000;
+	height: 200px;
+	max-width: auto;
+	margin-top: 50px;
+
+}
+
+footer a {
+	margin: 0px;
+    color: #000000;
+}
 h4 {
+	color: #FFFFFF;
+	position: relative;
+	margin: 10px;
+	padding: 10px;
 	font-size: 16px;
 	font-family: 'Muli', sans-serif;
 
 }
-p{
-	padding:5px;
-	font-size: 14px;
-	font-family: 'Muli', sans-serif;
-}
+
 #messButton{
+	position: relative;
 	color: white;
 	background-color: #610000;
 	text-decoration: none;
-	margin: 10px;
-	padding-bottom: 10px;
+	padding: 10px;
+	width: 225px;
+	height: 30px;
+	text-align: center;
+	margin-bottom: 70px;
 }
 
 .discoverBack {
@@ -237,7 +257,11 @@ p{
   background-color: rgba(0,0,0,.1);
 }
 
-div.discoverSongbox {
+.song{
+  display: inline-block;
+}
+
+.discoverSongbox {
 	 box-shadow: 10px 10px;
 	 border: 2px solid #363636;
 	 text-align: right;
@@ -254,19 +278,57 @@ div.discoverSongbox {
 	background-image: cover;
     background-color: black;
 	padding: 10px;
-    margin: 40px 40px 20px 20px;
+    margin: 60px 40px 20px 20px;
     float: left;
 
 }
 
-a {
+p {
       text-decoration:none;
-	  color: #9F1828;
+	  color: #FFFFFF;
 	  float: left;
+	  margin: 0px;
+	padding-top: 30px;
+	padding-left: 30px;
+	font-size: 14px;
+	font-family: 'Muli', sans-serif;
 }
 
 #links{
     text-decoration: underline;
     color: #9F1828;
     float: left;
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+a {
+      text-decoration:none;
+	  color: #9F1828;
+	  float: left;
 }
