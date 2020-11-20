@@ -98,11 +98,11 @@ echo <<<_END
 _END;
 ?>
 
-<<<<<<< HEAD
+
 <?
 require_once 'footer.php';
 ?>
-=======
+
 <html>
   <meta charset="UTF-8">
   <title>Upload</title>
@@ -116,7 +116,6 @@ require_once 'footer.php';
 	</form>
   </body>
 </html>
->>>>>>> 219b574e1be3fa0f046ba33b8013f62fdb9437d4
 
 
 <script>
