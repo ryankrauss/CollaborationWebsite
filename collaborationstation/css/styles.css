@@ -256,7 +256,7 @@ h4 {
   background-color: rgba(0,0,0,.1);
 }
 
-div.discoverSongbox {
+.discoverSongbox {
 	 box-shadow: 10px 10px;
 	 border: 2px solid #363636;
 	 text-align: right;
@@ -273,7 +273,7 @@ div.discoverSongbox {
 	background-image: cover;
     background-color: black;
 	padding: 10px;
-    margin: 40px 40px 20px 20px;
+    margin: 60px 40px 20px 20px;
     float: left;
 
 }
@@ -320,4 +320,10 @@ p {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+}
+
+a {
+      text-decoration:none;
+	  color: #9F1828;
+	  float: left;
 }
