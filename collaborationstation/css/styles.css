@@ -232,6 +232,10 @@ p{
 	margin: 2em;
 }
 
+.discoverContainer {
+  background-color: rgba(0,0,0,.1);
+}
+
 div.discoverSongbox {
 	 box-shadow: 10px 10px;
 	 border: 2px solid #363636;

@@ -17,7 +17,7 @@ if (isset($_POST['user'])) {
         else {
             $_SESSION['user'] = $user;
             $_SESSION['pass'] = $pass;
-            echo "<script>window.location = 'index.php?view=$user'</script>";
+            echo "<script>window.location = 'members.php?view=$user'</script>";
         }
     }
 }
