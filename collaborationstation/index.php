@@ -23,7 +23,7 @@ else {
         <h4>Please sign up, or log in if you're already a member.</h4>
 _GUEST;
 }
-
+showDiscover($view);
 echo <<<_END
     </div><br>
 _END;
