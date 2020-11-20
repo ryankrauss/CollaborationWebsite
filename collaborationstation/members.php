@@ -8,9 +8,7 @@ if (!$loggedin) {
 
 if (isset($_GET['view'])) {
     $view = sanitizeString($_GET['view']);
-
-    if ($view == $user)
-        $name = "$view";
+    $name = "$view";
 
     echo "<h3>$name</h3>";
     showProfile($view);
