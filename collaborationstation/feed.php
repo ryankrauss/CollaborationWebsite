@@ -61,7 +61,8 @@ for ($j = 0 ; $j < $num ; ++$j)
 }
 
 if (!$num)
+{
     echo "<br><span class='info'>No messages yet</span><br><br>";
-
+}
 require_once 'footer.php';
 ?>

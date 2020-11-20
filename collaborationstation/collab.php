@@ -35,10 +35,6 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
     }
 }
 
-echo <<<_END
-    </div><br>
-_END;
-
 if (!$loggedin)
     die("Log in for messages</div><footer></footer></body></html>");
 
@@ -113,10 +109,12 @@ for ($j = 0 ; $j < $num ; ++$j)
 }
 
 if (!$num)
+
     echo "<br><span class='info'>No messages yet</span><br><br>";
 
-require_once 'footer.php';
-
+echo <<<_END
+    </div><br>
+_END;
 ?>
 
 <html>
@@ -132,3 +130,7 @@ require_once 'footer.php';
 	</form>
   </body>
 </html>
+
+<?
+require_once 'footer.php';
+?>
