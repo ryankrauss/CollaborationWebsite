@@ -3,8 +3,8 @@
 <?php
 session_start();
 require_once 'header.php';
+require_once 'testpage.php';
 
-echo "<h3>Upload Your Song </h3>";
 echo "<div>";
 
 if(isset($_POST['submit']))
@@ -114,8 +114,6 @@ for ($j = 0 ; $j < $num ; ++$j)
 
 if (!$num)
     echo "<br><span class='info'>No messages yet</span><br><br>";
-
-echo "<br><a data-role='button' href='collab.php?view=$view'>Refresh messages</a>";
 
 require_once 'footer.php';
 
