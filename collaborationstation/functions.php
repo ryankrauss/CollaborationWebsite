@@ -115,7 +115,7 @@ function showDiscover($user) {
               echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
           }else{
               echo "<img class='discoverPic' src='userpics/default.png'>";
-          }
+              }
           echo "<div class='discoverSongbox'>";
           echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
           //echo "<div class='discoverSongs'>";
