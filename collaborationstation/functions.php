@@ -168,16 +168,18 @@ function searchProfile($user) {
     echo "<div class='discoverSongbox'>";
     echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
     foreach (glob("useraudio/$friend*.mp3") as $file) {
-        $shortName = explode(".", basename($file));
-        echo "<div style='display: inline-block;'>";
-        echo("<p'><b>$shortName[1]</b></p>");
-        if (file_exists($file)) {
-            echo "
-                  <audio controls style='float: left; padding-right: 2em;'>
-                    <source src='$file' type='audio/mp3'>
-                    Your browser does not support the audio element.
-                  </audio>
-                  ";
+        if (substr_count($file, ".") <= 2){
+          $shortName = explode(".", basename($file));
+          echo "<div style='display: inline-block;'>";
+          echo("<p'><b>$shortName[1]</b></p>");
+          if (file_exists($file)) {
+              echo "
+                    <audio controls style='float: left; padding-right: 2em;'>
+                      <source src='$file' type='audio/mp3'>
+                      Your browser does not support the audio element.
+                    </audio>
+                    ";
+          }
         }
         echo "</div>";
         $count++;
