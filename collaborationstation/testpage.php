@@ -4,6 +4,7 @@
 session_start();
 require_once 'header.php';
 
+
 echo "<h3>Upload Your Song </h3>";
 echo "<div>";
 
@@ -56,7 +57,5 @@ _END;
 	</form>
   </body>
 </html>
-<?
-require_once 'footer.php';
-?>
+
 
