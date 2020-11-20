@@ -96,12 +96,11 @@ function showDiscover($user) {
         $row           = $result->fetch_array(MYSQLI_ASSOC);
         $following[$j] = $row['user'];
     }
-    //echo "<div class='discoverBack'>";
+	echo "<h2>Discover</h2>";
   foreach($following as $friend) {
       $name = "$friend";
       $count = 0;
       $exists = false;
-      //echo "<div class='discoverBox'>";
 
       foreach (glob("useraudio/$friend*.mp3") as $file) {
           if (file_exists($file)) {
@@ -109,9 +108,7 @@ function showDiscover($user) {
           }
       }
       if ($exists == true){
-          echo "<h2>Discover</h2>";
           echo "<div class='discoverInfo'>";
-          //echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
           if (file_exists("userpics/$friend.jpg"))
               echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
           echo "<div class='discoverSongbox'>";
@@ -155,29 +152,31 @@ function searchProfile($user) {
       $row           = $result->fetch_array(MYSQLI_ASSOC);
       $following[$j] = $row['user'];
   }
-  echo "<div class='discoverBack'>";
   foreach($following as $friend){
     $name = "$friend";
-    echo "<div class='discoverBox'>";
     echo "<div class='discoverInfo'>";
-    echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
     if (file_exists("userpics/$friend.jpg"))
-        echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
-    echo "<div class='discoverSongbox'>";
-    foreach(glob("useraudio/$friend*.mp3") as $file){
-      $shortName = explode(".", basename($file));
-      echo "<div style='display: inline-block;'>";
-      echo ("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
-      if (file_exists($file)){
-        echo "
-        <audio controls style='float: left; padding-right: 2em;'>
-          <source src='$file' type='audio/mp3'>
-          Your browser does not support the audio element.
-        </audio>
-        ";
-      }
-      echo "</div>";
-    }
+              echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
+          echo "<div class='discoverSongbox'>";
+          echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
+          foreach (glob("useraudio/$friend*.mp3") as $file) {
+              $shortName = explode(".", basename($file));
+              echo "<div style='display: inline-block;'>";
+              echo("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
+              if (file_exists($file)) {
+                  echo "
+            <audio controls style='float: left; padding-right: 2em;'>
+              <source src='$file' type='audio/mp3'>
+              Your browser does not support the audio element.
+            </audio>
+            ";
+              }
+              echo "</div>";
+              $count++;
+              if ($count == 3) {
+                  break;
+              }
+          }
     echo "</div>";
     echo "</div>";
     echo "</div>";
