@@ -38,7 +38,7 @@ echo <<<_LOGGEDIN
             <div class="navbar">
                 <li><a href='members.php?view=$user'>Home</a></li>
                 <li><a href='friends.php'>Friends</a></li>
-                <li><a href='collab.php'>Collab</a></li>
+                <li><a href='collab.php?view=$user'>Collab</a></li>
                 <li><a href='testpage.php'>Song Upload</a></li>
                 <li><a href='feed.php'>Live Feed</a></li>
 

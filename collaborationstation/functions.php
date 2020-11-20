@@ -115,6 +115,7 @@ function showDiscover($user) {
           echo "<div class='discoverSongbox'>";
           echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
           foreach (glob("useraudio/$friend*.mp3") as $file) {
+            if (substr_count($file, ".") <= 2){
               $shortName = explode(".", basename($file));
               echo "<div style='display: inline-block;'>";
               echo("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
@@ -126,15 +127,16 @@ function showDiscover($user) {
             </audio>
             ";
               }
+            }
               echo "</div>";
               $count++;
               if ($count == 3) {
                   break;
               }
-          }
           echo "</div>";
           echo "</div>";
           echo "<br>";
+        }
       }
   }
   echo "</div>";
@@ -189,6 +191,61 @@ function searchProfile($user) {
 
 
 
+}
+
+
+function showCollab($user) {
+    $result = queryMysql("SELECT * FROM members where user!='$user'");
+    $following = array();
+    $num    = $result->num_rows;
+    for ($j = 0 ; $j < $num ; ++$j) {
+        $row           = $result->fetch_array(MYSQLI_ASSOC);
+        $following[$j] = $row['user'];
+    }
+  echo "<div class='discoverContainer'>";
+  foreach($following as $friend) {
+      $name = "$friend";
+      $count = 0;
+      $exists = false;
+      echo "<script>console.log('friend = $name')</script>";
+      foreach (glob("useraudio/$friend.$user*.mp3") as $file) {
+          if (file_exists($file)) {
+              $exists = true;
+              echo "<script>console.log('working!!!')</script>";
+          }
+      }
+
+
+      if ($exists == true){
+          echo "<div class='discoverInfo'>";
+          if (file_exists("userpics/$friend.jpg"))
+              echo "<img class='discoverPic' src='userpics/$friend.jpg'>";
+          echo "<div class='discoverSongbox'>";
+          echo "<h5><a href='members.php?view=$name'>$name</a></h5>";
+          foreach (glob("useraudio/$friend.$user*.mp3") as $file) {
+              $shortName = explode(".", basename($file));
+              echo "<div style='display: inline-block;'>";
+              echo("<p style='float: left; padding-right: 2em;'><b>$shortName[1]</b></p>");
+              if (file_exists($file)) {
+                  echo "
+            <audio controls style='float: left; padding-right: 2em;'>
+              <source src='$file' type='audio/mp3'>
+              Your browser does not support the audio element.
+            </audio>
+            ";
+              }
+              echo "</div>";
+              $count++;
+              if ($count == 3) {
+                  break;
+              }
+          }
+          echo "</div>";
+          echo "</div>";
+          echo "<br>";
+      }
+  }
+  echo "</div>";
 }
 
 
