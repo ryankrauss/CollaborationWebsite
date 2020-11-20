@@ -40,7 +40,7 @@ html {
 #logo {
 	font-size: 70px;
     font-family: 'Playfair Display', serif;
-    padding: 100px;
+    padding: 120px;
     width: 400px;
 	margin: auto;
     font-variant: small-caps;
@@ -140,7 +140,7 @@ input[type=submit]{
 	font-size: 20px;
     min-height: 200px;
     padding: 20px;
-    //background-color: #707070;
+    background-color: #707070;
 
     padding-bottom: 10px;
 }
@@ -175,7 +175,17 @@ input[type=submit]{
     margin: 0 40px 20px 0px;
 	padding: 10px;
 }
+footer {
+	position: bottom;
+    font-family: 'Muli', sans-serif;
+    padding: 30px;
+    color: #ddd;
+    background-color: #000000;
+}
 
+footer a {
+    color: #000000;
+}
 
 textarea {
     width: 95%;
@@ -185,17 +195,7 @@ textarea {
     height: 100px;
 }
 
-footer {
-	position: bottom;
-    font-family: 'Muli', sans-serif;
-    padding: 40px;
-    color: #ddd;
-    background-color: #000000;
-}
 
-footer a {
-    color: #000000;
-}
 h4 {
 	font-size: 16px;
 	font-family: 'Muli', sans-serif;
@@ -210,6 +210,7 @@ p{
 	color: white;
 	background-color: #610000;
 	text-decoration: none;
+	margin: 10px;
 	padding-bottom: 10px;
 }
 
@@ -230,6 +231,10 @@ p{
 .discoverInfo {
 	display: inline;
 	margin: 2em;
+}
+
+.discoverContainer {
+  background-color: rgba(0,0,0,.1);
 }
 
 div.discoverSongbox {

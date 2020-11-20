@@ -33,6 +33,7 @@ if(isset($_POST['submit']))
                     }
         }
     }
+	
 }
 
 
@@ -55,4 +56,7 @@ _END;
 	</form>
   </body>
 </html>
+<?
+require_once 'footer.php';
+?>
 

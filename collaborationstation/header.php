@@ -25,7 +25,6 @@ if (isset($_SESSION['user'])) {
     $userstr  = "Logged in as: $user";
 }
 else $loggedin = FALSE;
-
 echo <<<_HEADER_OPEN
 
     <body>
@@ -53,13 +52,6 @@ echo <<<_LOGGEDIN
                         <li><a href='logout.php'>Log out</a></li>
                     </div>
                 </div>
-                <!--form method="GET" action="search.php">
-                  <div id='button-holder'>
-                    <button name="search" value="search"><img src="css/magnifying_glass_icon.png" alt="searchButton"></button>
-                    <input type="image" name="search" value="search_value" alt="search" src="css/magnifying_glass_icon.png">
-                  </div>
-                  <input type="text" class="searchBar" placeholder="Search User..">
-                </form-->
 
                 <form id="form" role="search" action="search.php">
                   <input type="search" id="query" name="q"
@@ -78,6 +70,12 @@ echo <<<_GUEST
                 <li><a href='index.php'>Home</a></li>
                 <li><a href='signup.php'>Sign Up</a></li>
                 <li><a href='login.php'>Log In</a></li>
+                <form id="form" role="search" action="search.php">
+                  <input type="search" id="query" name="q"
+                   placeholder="Search Users..."
+                   aria-label="Search through site content">
+                  <button>Search</button>
+                </form>
             </div>
 _GUEST;
  }

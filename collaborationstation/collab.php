@@ -35,10 +35,6 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")
     }
 }
 
-echo <<<_END
-    </div><br>
-_END;
-
 if (!$loggedin)
     die("Log in for messages</div><footer></footer></body></html>");
 
@@ -69,7 +65,7 @@ if ($view != "") {
   // showProfile($view);
 
   echo <<<_END
-  <form method='post' action='messages.php?view=$view'>
+  <form method='post' action='collab.php?view=$view'>
     <fieldset data-role="controlgroup" data-type="horizontal">
         <legend>Type here to leave a message</legend>
         <input type='radio' name='pm' id='private' value='1'>
@@ -98,7 +94,7 @@ for ($j = 0 ; $j < $num ; ++$j)
 
   if ($row['pm'] == 0 || $row['auth'] == $user || $row['recip'] == $user) {
       echo date('M jS \'y g:ia:', $row['time']);
-      echo " <a href='messages.php?view=" . $row['auth'] . "'>" . $row['auth']. "</a> ";
+      echo " <a href='collab.php?view=" . $row['auth'] . "'>" . $row['auth']. "</a> ";
 
       if ($row['pm'] == 0)
           echo "wrote a <em>public post</em>:<div>&quot;" . $row['message'] . "&quot; ";
@@ -106,17 +102,19 @@ for ($j = 0 ; $j < $num ; ++$j)
           echo "wrote a <em>private note</em>:<br><div>&quot;" . $row['message']. "&quot; ";
 
       if ($row['recip'] == $user)
-          echo "[<a href='messages.php?view=$view" . "&erase=" . $row['id'] . "'>Delete</a>]";
+          echo "[<a href='collab.php?view=$view" . "&erase=" . $row['id'] . "'>Delete</a>]";
       echo "</div>";
   }
 }
 }
 
 if (!$num)
+
     echo "<br><span class='info'>No messages yet</span><br><br>";
 
-require_once 'footer.php';
-
+echo <<<_END
+    </div><br>
+_END;
 ?>
 
 <html>
@@ -132,3 +130,8 @@ require_once 'footer.php';
 	</form>
   </body>
 </html>
+
+<?
+require_once 'footer.php';
+?>
+
